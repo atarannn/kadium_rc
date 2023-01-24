@@ -1,0 +1,261 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  height: auto;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @include to(680px) {
+    width: calc(100% - var(--offset-60)*2);
+  }
+  .form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.form-title {
+  @include font-medium;
+  font-size: var(--form-title-title);
+}
+.form-text {
+  width: 70%;
+  margin-top: var(--offset-30);
+}
+.form-thanks-close {
+  margin-top: var(--offset-30);
+  cursor: pointer;
+}
+.input-title {
+  @include font-medium;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  line-height: 100%;
+  color: $bc;
+  text-align: center;
+  margin-bottom: 8px;
+  @include to(1024px) {
+    display: none;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn, .form-thanks-btn {
+  margin-top: 32px;
+  cursor: pointer;
+  border: none;
+  @include to(1024px) {
+    margin-top: 25px;
+  }
+}
+.form-field:not(#t) {
+  position: relative;
+  margin: 32px 0 0;
+  background: transparent;
+  transition: all 0.3s;
+  width: 100%;
+  @include to(1024px) {
+    margin: 25px 0 0;
+  }
+}
+[data-animation="focus"] .input-message {
+  position: absolute;
+  top: 50%;
+  left: var(--input-padding);
+  z-index: 3;
+  padding: 0 7px;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  transform: translate(0%, -50%);
+  user-select: none;
+  pointer-events: none;
+  background-color: #8e8e8e;
+  transition: all 0.16s cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+}
+textarea.form-field__input {
+  padding-top: 16px;
+  height: 100px;
+  @include to(1024px) {
+    height: 70px;
+  }
+}
+.form-field__input {
+  width: 100%;
+  background: none;
+  color: $grey;
+  font-size: var(--font16);
+  text-align: center;
+  height: 60px;
+  border: 1px solid #C1C6D0;
+  @include to(1660px) {
+    height: 45px;
+  }
+  &::placeholder {
+    color: $grey;
+    text-align: center;
+  }
+  &:focus + .form-field-message {
+    opacity: 1;
+  }
+}
+.mask-absolute {
+  text-align: center;
+  color: $grey;
+  font-size: var(--font18);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #C1C6D0;
+  background: $wc;
+  @include to(1660px) {
+    height: 45px;
+  }
+}
+[data-animation="focus"] .form-field__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-animation="none"] .input-message {
+  position: absolute;
+  bottom: -1px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+  color: $grey;
+  font-size: 12px;
+  text-transform: none;
+  transform: translate(0%, 100%);
+}
+[data-field-input][data-status="field--inactive"]:not(#r) {
+  .input-message {
+    color: $grey;
+  }
+}
+[data-field-input][data-status="field--active"]:not(#r) {
+  .input-message {
+    color: $grey;
+  }
+}
+[data-field-input][data-status="field--error"]:not(#r) {
+  .input-message {
+    color: #EA4041;
+  }
+}
+[data-field-input][data-status="field--success"]:not(#r) {
+  .input-message {
+    color: #96C480;
+  }
+}
+.selected:not(#f) .input-message {
+  top: 0;
+  font-size: 10px;
+}
+.requaired-block {
+  &-ico {
+    width: 25px;
+    height: 25px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.requaired-block {
+  &__ico {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    font-size: vw(16);
+    line-height: 170%;
+    margin: 0px vw(18);
+    white-space: nowrap;
+
+    color: #BBBEC2;
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width:1600px){
+      font-size: vw(16);
+      line-height: 1.4em;
+    }
+  }
+}
+.form-field-message {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 12px;
+  line-height: 120%;
+  color: $grey;
+  transform: translateY(calc(-100% - 10px));
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width:1600px) {
+    font-size: vw(16);
+  }
+}
+
+.requaired-block-ico--position {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.form-thanks-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(10, 17, 27, 0.5);
+  transition: opacity 0.5s ease-out, visibility 1ms linear 0.5s;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 1ms linear 0.5s;
+  }
+  .form-thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    height: 40%;
+    background: $wc;
+  }
+}

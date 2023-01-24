@@ -1,0 +1,166 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'renovated_apartments'
+    var id_page = 'id-page-renovated_apartments'
+    var class_page = 'class-page-renovated_apartments'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Квартири з ремонтом',
+        link: pagesLink[0].renovated_apartments
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/renovated_apartments.js')
+  script(defer src='./assets/scripts/sideform.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs.pug
+  .apartments-wrapper.fields
+    .tabs
+      button(data-view="class-1").tabs-btn White box
+      button(data-view="class-2").tabs-btn Мінімалізм
+      button(data-view="class-3").tabs-btn Скандинавський
+      button(data-view="class-4").tabs-btn.active З ремонтом
+    .apartments-card-list
+      .apartments-card.class-1
+        .apartments-card-left
+          .apartments-card-left__wrapper
+            .apartments-card-left__text-top
+              .dark-text-uppercase White box
+              .dark-text Мріючи про власну квартиру, ми малюємо в уяві варіант нового, затишного, красивого і сучасного помешкання, де є все для комфортного проживання. Мрії збуваються швидше разом з квартирами з PROдуманим ремонтом від KAN. Більше не потрібно витрачати час та кошти на ремонт, адже ми про все подбали створюючи наші квартири. Купуючи житло з готовим ремонтом ви отримуєте квартиру мрії, в якій продумано все до дрібниць завдяки нашим кваліфікованим спеціалістам. Ви не будете чути шум будівельних робіт в сусідніх квартирах, адже вони будуть так само з PROдуманим ремонтом.
+            .apartments-card-left__text-bottom
+              .dark-text-uppercase Комплектація квартир з ремонтом
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase Стелі
+                ul.apartments-card-left__text-bottom__block__list
+                  li
+                    span Житлові кімнати:
+                    | поверхня оштукатурюється та фарбується у декілька шарів
+                  li
+                    span Санвузли:
+                    | підвісна стеля з ГКЛВ поштукатурена та пофарбована зносостійкою фарбою
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase ЕЛЕКТРИКА
+                ul.apartments-card-left__text-bottom__block__list
+                  li Електрофурнітура
+                  li Силові кабелі (матеріал мідь)
+                  li Слабкострумові системи - кабельна розводка інтернету/ТВ в приміщеннях
+                  li Точкове освітлення, люстри-підвіси та світлодіодні стрічки
+        .apartments-card-right
+          img(src="./assets/images/apartments/1.jpg")
+
+      .apartments-card.class-2
+        .apartments-card-left
+          .apartments-card-left__wrapper
+            .apartments-card-left__text-top
+              .dark-text-uppercase Мінімалізм
+              .dark-text Мріючи про власну квартиру, ми малюємо в уяві варіант нового, затишного, красивого і сучасного помешкання, де є все для комфортного проживання. Мрії збуваються швидше разом з квартирами з PROдуманим ремонтом від KAN. Більше не потрібно витрачати час та кошти на ремонт, адже ми про все подбали створюючи наші квартири. Купуючи житло з готовим ремонтом ви отримуєте квартиру мрії, в якій продумано все до дрібниць завдяки нашим кваліфікованим спеціалістам. Ви не будете чути шум будівельних робіт в сусідніх квартирах, адже вони будуть так само з PROдуманим ремонтом.
+            .apartments-card-left__text-bottom
+              .dark-text-uppercase Комплектація квартир з ремонтом
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase Стелі
+                ul.apartments-card-left__text-bottom__block__list
+                  li
+                    span Житлові кімнати:
+                    | поверхня оштукатурюється та фарбується у декілька шарів
+                  li
+                    span Санвузли:
+                    | підвісна стеля з ГКЛВ поштукатурена та пофарбована зносостійкою фарбою
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase ЕЛЕКТРИКА
+                ul.apartments-card-left__text-bottom__block__list
+                  li Електрофурнітура
+                  li Силові кабелі (матеріал мідь)
+                  li Слабкострумові системи - кабельна розводка інтернету/ТВ в приміщеннях
+                  li Точкове освітлення, люстри-підвіси та світлодіодні стрічки
+        .apartments-card-right
+          img(src="./assets/images/apartments/1.jpg")
+      .apartments-card.class-3
+        .apartments-card-left
+          .apartments-card-left__wrapper
+            .apartments-card-left__text-top
+              .dark-text-uppercase Скандинавський
+              .dark-text Мріючи про власну квартиру, ми малюємо в уяві варіант нового, затишного, красивого і сучасного помешкання, де є все для комфортного проживання. Мрії збуваються швидше разом з квартирами з PROдуманим ремонтом від KAN. Більше не потрібно витрачати час та кошти на ремонт, адже ми про все подбали створюючи наші квартири. Купуючи житло з готовим ремонтом ви отримуєте квартиру мрії, в якій продумано все до дрібниць завдяки нашим кваліфікованим спеціалістам. Ви не будете чути шум будівельних робіт в сусідніх квартирах, адже вони будуть так само з PROдуманим ремонтом.
+            .apartments-card-left__text-bottom
+              .dark-text-uppercase Комплектація квартир з ремонтом
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase Стелі
+                ul.apartments-card-left__text-bottom__block__list
+                  li
+                    span Житлові кімнати:
+                    | поверхня оштукатурюється та фарбується у декілька шарів
+                  li
+                    span Санвузли:
+                    | підвісна стеля з ГКЛВ поштукатурена та пофарбована зносостійкою фарбою
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase ЕЛЕКТРИКА
+                ul.apartments-card-left__text-bottom__block__list
+                  li Електрофурнітура
+                  li Силові кабелі (матеріал мідь)
+                  li Слабкострумові системи - кабельна розводка інтернету/ТВ в приміщеннях
+                  li Точкове освітлення, люстри-підвіси та світлодіодні стрічки
+        .apartments-card-right
+          img(src="./assets/images/apartments/1.jpg")
+      .apartments-card.class-4.active
+        .apartments-card-left
+          .apartments-card-left__wrapper
+            .apartments-card-left__text-top
+              .dark-text-uppercase З ремонтом
+              .dark-text Мріючи про власну квартиру, ми малюємо в уяві варіант нового, затишного, красивого і сучасного помешкання, де є все для комфортного проживання. Мрії збуваються швидше разом з квартирами з PROдуманим ремонтом від KAN. Більше не потрібно витрачати час та кошти на ремонт, адже ми про все подбали створюючи наші квартири. Купуючи житло з готовим ремонтом ви отримуєте квартиру мрії, в якій продумано все до дрібниць завдяки нашим кваліфікованим спеціалістам. Ви не будете чути шум будівельних робіт в сусідніх квартирах, адже вони будуть так само з PROдуманим ремонтом.
+            .apartments-card-left__text-bottom
+              .dark-text-uppercase Комплектація квартир з ремонтом
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase Стелі
+                ul.apartments-card-left__text-bottom__block__list
+                  li
+                    span Житлові кімнати:
+                    | поверхня оштукатурюється та фарбується у декілька шарів
+                  li
+                    span Санвузли:
+                    | підвісна стеля з ГКЛВ поштукатурена та пофарбована зносостійкою фарбою
+              .apartments-card-left__text-bottom__block
+                .dark-text-uppercase ЕЛЕКТРИКА
+                ul.apartments-card-left__text-bottom__block__list
+                  li Електрофурнітура
+                  li Силові кабелі (матеріал мідь)
+                  li Слабкострумові системи - кабельна розводка інтернету/ТВ в приміщеннях
+                  li Точкове освітлення, люстри-підвіси та світлодіодні стрічки
+        .apartments-card-right
+          .slider.js-slider-2
+            .swiper-wrapper
+              .swiper-slide
+                img(src="./assets/images/apartments/1.jpg")
+              .swiper-slide
+                img(src="./assets/images/apartments/1.jpg")
+            .swiper-pagination
+            .slider-btn-wrapper
+              .btn-swiper-left(data-swiper-2-prev)
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 10L11.3333 19M2 10L11.3333 1M2 10H22" stroke-width="2"/>
+                </svg>
+              .btn-swiper-right(data-swiper-2-next)
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 10L10.6667 19M20 10L10.6667 1M20 10H0" stroke-width="2"/>
+                </svg>
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,190 @@
+.about-block {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  @include to(1024px) {
+    height: 60vh;
+  }
+  @include to(680px) {
+    height: 70vh;
+  }
+  &__main-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &:after {
+      content: '';
+      background: linear-gradient(90deg, rgba(10, 17, 27, 0.8) 45.77%, rgba(10, 17, 27, 0) 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      @include to(680px) {
+        background: linear-gradient(90deg, rgba(10, 17, 27, 0.8) 100%, rgba(10, 17, 27, 0) 100%);
+      }
+    }
+  }
+  &__text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 30%;
+    gap: var(--offset-20);
+    @include to(1660px) {
+      max-width: 40%;
+    }
+    @include to(1024px) {
+      max-width: 60%;
+    }
+    @include to(680px) {
+      max-width: 100%;
+      left: var(--offset-60);
+      right: var(--field);
+    }
+    .light-text-uppercase {
+      font-size: var(--text-font28);
+      text-transform: none;
+      text-align: left;
+    }
+    .light-text {
+      text-align: left;
+    }
+  }
+}
+.about-block-2 {
+  @include to(680px) {
+    height: auto;
+    .block-left {
+      height: 100%;
+    }
+    .block-right {
+      height: 100%;
+    }
+  }
+  .block-right {
+    &__text {
+      align-items: flex-start;
+      padding: var(--offset-20);
+      .dark-text-uppercase {
+        font-size: var(--text-font28);
+        text-transform: none;
+        text-align: left;
+        margin-bottom: 8px;
+      }
+      .dark-text {
+        text-align: left;
+        max-width: 100%;
+      }
+      .about-text-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: var(--offset-30);
+        width: 100%;
+        gap: var(--field);
+        @include to(680px) {
+          grid-template-columns: 1fr;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: var(--field);
+          img {
+            height: 50px;
+            width: 50px;
+            @include to(1660px) {
+              height: 40px;
+              width: 40px;
+            }
+          }
+          .col {
+            .dark-text-uppercase {
+              font-size: var(--text-font20);
+              margin-bottom: 0;
+            }
+            .dark-text {
+              line-height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dev-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 100px solid $wc;
+  background: $wc;
+  border-image: url("../../assets/images/about/dev-bg.png") 100;
+  width: calc(100% - var(--field)*2);
+  margin: 0 auto;
+  @include to(680px) {
+    border: none;
+    padding: var(--offset-60);
+  }
+  &__text {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background: $wc;
+    height: fit-content;
+    width: 100%;
+    gap: 25%;
+    padding: 0 15%;
+    @include to(1660px) {
+      padding: 0 10%;
+      gap: 20%;
+    }
+    @include to(1024px) {
+      grid-template-columns: 1fr;
+      gap: var(--offset-60);
+      padding: 0 5%;
+    }
+    .col {
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      align-self: center;
+      @include to(1024px) {
+        justify-self: start;
+        align-items: flex-start;
+      }
+      .dark-text-uppercase {
+        font-size: var(--text-font28);
+        text-transform: none;
+        text-align: left;
+      }
+      .dark-text {
+        text-align: left;
+        max-width: 100%;
+        margin-top: var(--offset-20);
+      }
+      .btn {
+        margin-top: var(--offset-40);
+      }
+      img {
+        width: 246px;
+        @include to(680px) {
+          width: 146px;
+        }
+      }
+    }
+  }
+}

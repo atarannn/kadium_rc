@@ -1,0 +1,88 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'single-news'
+    var id_page = 'id-page-single-news'
+    var class_page = 'class-page-single-news'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Компанію забудовника відзначено професійною нагородою премії «Український Будівельний Олімп – 2021»',
+        link: pagesLink[0].single-news
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/single-news.js')
+  script(defer src='./assets/scripts/sideform.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs.pug
+  .single-news__wrapper
+    .single-news__text
+      .dark-text-uppercase Яким буде Київ через 10 років? За версією нашої компанії, він буде найкомфортнішим містом у світі.
+      .dark-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ. У новому номері вона разом з архітекторами, забудовниками та урбаністами склала рейтинг 10 знакових об’єктів столиці та включила до нього відразу два проєкти, які ми реалізуємо спільно з партнерами забудовника1 і забудовника 2 — ми хочемо розказати вам про ці проєкти та показати їхні сильні сторони.
+    .slider.js-slider
+      .swiper-wrapper
+        .swiper-slide
+          img(src="./assets/images/news/single/1.jpg")
+        .swiper-slide
+          img(src="./assets/images/news/single/1.jpg")
+        .swiper-slide
+          img(src="./assets/images/news/single/1.jpg")
+      .swiper-pagination
+      .slider-btn-wrapper
+        .btn-swiper-left(data-swiper-prev)
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 10L11.3333 19M2 10L11.3333 1M2 10H22" stroke-width="2"/>
+          </svg>
+        .btn-swiper-right(data-swiper-next)
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 10L10.6667 19M20 10L10.6667 1M20 10H0" stroke-width="2"/>
+          </svg>
+    .single-news__text
+      .dark-text-uppercase Наш проєкт відзначив за наш підхід до будівництва кварталів, насичену інфраструктуру та головну родзинку району — набережну завдовжки 1 км.
+      ul.dark-text Вона буде відкрита для всіх охочих і стане улюбленим місцем для відпочинку та прогулянок містян і мешканців району. Вона буде відкрита для всіх охочих і стане улюбленим місцем для відпочинку та прогулянок містян і мешканців району. Вона буде відкрита для всіх охочих і стане улюбленим місцем для відпочинку та прогулянок містян і мешканців району:
+        li «Гарна набережна, яка відкриється на нашому проєкті, стане окрасою Києва», — зазначає у статті НВ головний архітектор Архіматики Дмитро Васильєв.
+        li «Гарна набережна, яка відкриється на нашому проєкті
+        li «Гарна набережна нашого проєкту, стане окрасою Києва», — зазначає
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8JSdy3nLLYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    .single-news__text
+      .dark-text-uppercase Яким буде Київ через 10 років? За версією нашої компанії, він буде найкомфортнішим містом у світі.
+      .dark-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ. У новому номері вона разом з архітекторами, забудовниками та урбаністами склала рейтинг 10 знакових об’єктів столиці та включила до нього відразу два проєкти, які ми реалізуємо спільно з партнерами забудовника1 і забудовника 2 — ми хочемо розказати вам про ці проєкти та показати їхні сильні сторони.
+    img(src="./assets/images/news/single/2.jpg").single-news__img
+    a(href="#").btn
+      span Обрати квартиру
+
+  .last-news
+    .dark-title Останні Новини та акції
+    .last-news__wrapper.fields
+      a(href="#").news-card
+        .img
+          img(src="./assets/images/news/2.jpg")
+        .dark-text Компанію забудовника відзначено професійною нагородою премії «Український олімп»
+      a(href="#").news-card
+        .img
+          img(src="./assets/images/news/3.jpg")
+        .dark-text Графік роботи відділу продажів на різдвяні свята
+      a(href="#").news-card
+        .img
+          img(src="./assets/images/news/4.jpg")
+        .dark-text Зміна у законодавстві щодо розстрочки квартири
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

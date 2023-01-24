@@ -1,0 +1,18 @@
+.form-wrapper
+  form(data-form autocomplete="off").form
+    .form-title.dark-title Зворотній зв’язок
+    .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+      .input-title Ім’я
+      input(type='text' name="name" placeholder="Name").form-field__input
+      .input-message(data-input-message)
+    .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+      .input-title Телефон
+      input(type='text' name="phone" placeholder="Tell").form-field__input
+      .mask-absolute.js-mask-absolute Tell
+      .input-message(data-input-message)
+    .form-field.disabled.form-field-input(data-field-input data-field-comment data-status="field--inactive")
+      .input-title Коментар
+      textarea(type='text' name="comment" placeholder="Comment").form-field__input.text-input
+      .input-message(data-input-message)
+    button( type="submit" data-btn-submit).submit-btn.link.btn
+        span(data-btn-submit-text) Надіслати повідомлення

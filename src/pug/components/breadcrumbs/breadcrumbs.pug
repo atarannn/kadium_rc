@@ -1,0 +1,14 @@
+.breadcrumbs-wrapper
+  ul.breadcrumbs
+    li.breadcrumbs-item
+      a(href="index.html").link--hover-3 головна
+    <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="6" height="6" fill="#384C67"/>
+    </svg>
+    if breadcrumbsSubitem
+      each v in breadcrumbsSubitem
+        li.breadcrumbs-item.breadcrumbs-item__current= v.label
+  if breadcrumbsSubitem
+    each v in breadcrumbsSubitem
+      .dark-title= v.label
+

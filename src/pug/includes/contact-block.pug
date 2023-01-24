@@ -1,0 +1,34 @@
+section.contact-block.fields.block
+  .block-left
+    img(src="./assets/images/contacts/1.jpg")
+    .block-left__info
+      +svg('logo-white')
+      .col
+        .light-text Адреса:
+        .light-text-uppercase М. КРОПИВНИЦЬКИЙ, ВУЛ. ШЕВЧЕНКО 1
+        a(href="#").map-btn
+          .light-text-uppercase.link--hover-4 Відкрити на мапі
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.73809 11L10.5 6M10.5 6L5.73809 1M10.5 6L0.5 6"/>
+          </svg>
+      .col
+        .light-text E-mail:
+        a(href="mailto:INFO@A+Y.COM.UA").link--hover-2
+          .light-text-uppercase INFO@A+Y.COM.UA
+      .col
+        .light-text Телефони:
+        a(href="tel:0992847777").link--hover-2
+          .light-text-uppercase (099) 284 7777
+        a(href="tel:0992847777").link--hover-2
+          .light-text-uppercase (099) 284 7777
+      .col
+        .light-text Social:
+        a(href="#").link--hover-2
+          .light-text-uppercase FACEBOOK
+        a(href="#").link--hover-2
+          .light-text-uppercase INSTAGRAM
+
+
+  .block-right
+    include ../components/form/form.pug
+

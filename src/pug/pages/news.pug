@@ -1,0 +1,58 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'news'
+    var id_page = 'id-page-news'
+    var class_page = 'class-page-news'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Новини та акції',
+        link: pagesLink[0].news
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/news.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/sideform.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs.pug
+  .news-wrapper.fields
+    a(href="single-news.html").news-card
+      .img
+        img(src="./assets/images/news/1.jpg")
+      .dark-text Старт продажів відкрито
+    a(href="#").news-card
+      .img
+        img(src="./assets/images/news/2.jpg")
+      .dark-text Компанію забудовника відзначено професійною нагородою премії «Український олімп»
+    a(href="#").news-card
+      .img
+        img(src="./assets/images/news/3.jpg")
+      .dark-text Графік роботи відділу продажів на різдвяні свята
+    a(href="#").news-card
+      .img
+        img(src="./assets/images/news/4.jpg")
+      .dark-text Зміна у законодавстві щодо розстрочки квартири
+    a(href="#").news-card
+      .img
+        img(src="./assets/images/news/5.jpg")
+      .dark-text На сайті оновилися документи
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

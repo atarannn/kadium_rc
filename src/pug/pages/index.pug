@@ -1,0 +1,105 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'home'
+    var id_page = 'home-page'
+    var class_page = 'home'
+
+
+block meta
+  title= 'Главная'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/parallax-animation.js')
+  script(defer src='./assets/scripts/btn-down.js')
+  script(defer src='./assets/scripts/news-slider.js')
+  script(defer src='./assets/scripts/sideform.js')
+
+block content
+  section.section-1
+    .section-1__main-img
+      img(src="./assets/images/home/1.jpg")
+    .section-1__text
+      +svg('logo')
+      .light-title Житловий комплекс комфорт класу в місті Кропивницький
+    a(href="#about").btn-down
+      <svg width="99" height="115" viewBox="0 0 99 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M97 18.85V2H17.928V112M17.928 112L2 96.05M17.928 112L33.8561 96.05" stroke="white" stroke-width="3"/>
+      </svg>
+      .btn-down__text.col
+        span.light-text-uppercase Дізнатися
+        span.light-text-uppercase більше
+  section#about.section-2.fields.block-offset-100.block
+    .block-left
+      img(src="./assets/images/home/2.jpg")
+    .block-right
+      .block-right__text
+        +svg('logo')
+        .dark-title Про проєкт
+        .dark-text Житловий комплекс комфорт класу в м. Кропивницький. Сучасна архітектура, монолітно-каркасна технологія будівництва, 5 хвилин до центра міста. 2 вежі, 1-ша 16-13 поверхів, 2-га 14-10 поверхів.
+        a(href="about.html").btn
+          span Детальніше
+  section.section-3
+    .section-3__main-img
+      img(src="./assets/images/home/3.jpg")
+    .section-3__text
+      +svg('logo')
+      .light-title Обрати квартиру
+      .light-text Житловий комплекс комфорт класу в м. Кропивницький. Сучасна архітектура, монолітно-каркасна технологія будівництва, 5 хвилин до центра міста. 2 вежі, 1-ша 16-13 поверхів, 2-га 14-10 поверхів.
+      a(href="#").btn
+        span Дивитися квартири
+  section.section-4
+    .dark-title Новини
+    .swiper-news.fields
+      .swiper-wrapper
+        a(href="single-news.html").swiper-slide.news-card
+          .img
+            img(src="./assets/images/news/1.jpg")
+          .dark-text Старт продажів відкрито
+        a(href="#").swiper-slide.news-card
+          .img
+            img(src="./assets/images/news/2.jpg")
+          .dark-text Компанію забудовника відзначено професійною нагородою премії «Український олімп»
+        a(href="#").swiper-slide.news-card
+          .img
+            img(src="./assets/images/news/3.jpg")
+          .dark-text Графік роботи відділу продажів на різдвяні свята
+        a(href="#").swiper-slide.news-card
+          .img
+            img(src="./assets/images/news/4.jpg")
+          .dark-text Зміна у законодавстві щодо розстрочки квартири
+        a(href="#").swiper-slide.news-card
+          .img
+            img(src="./assets/images/news/5.jpg")
+          .dark-text На сайті оновилися документи
+    .news-btn-wrapper
+      .btn-swiper-left(data-prev)
+        <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49 20L3 20M3 20L21.3425 38.5M3 20L21.3425 1.5" stroke-width="3"/>
+        </svg>
+      .btn-swiper-right(data-next)
+        <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M57 20L39.2667 38M57 20L39.2667 2M57 20H7.15256e-07" stroke-width="3"/>
+        </svg>
+  section.section-5
+    .dark-title Контакти
+    include ../includes/contact-block.pug
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,142 @@
+$default-font: "Gotham", sans-serif;
+$default-font2: "Gotham-2", sans-serif;
+
+$wc: #FFFFFF;
+$bc: #0A111B;
+$grey: #384C67;
+$brown: #CCC7BF;
+
+:root {
+  --field: 20px;
+  --padding: 40px;
+
+  --breadcrumbs-offset: 40px;
+
+  --offset-100: 100px;
+  --offset-60: 60px;
+  --offset-40: 40px;
+  --offset-30: 30px;
+  --offset-20: 20px;
+
+  --title-font: 64px;
+  --form-title-title: 48px;
+  --text-font28: 28px;
+  --text-font20: 20px;
+  --text-font16: 16px;
+  --text-font14: 14px;
+
+  --btn-h: 70px;
+
+  --header-h: 93px;
+  --logo-h: 110px;
+  --header-h-2: 120px;
+  --logo-h-2: 140px;
+  --header-offset: 40px;
+
+  --icon-logo: 74px;
+
+  --content-h: 624px;
+}
+
+
+@media screen and (max-width: 1660px) {
+  :root {
+    --field: 20px;
+    --padding: 20px;
+
+    --breadcrumbs-offset: 40px;
+
+    --offset-100: 60px;
+    --offset-60: 40px;
+    --offset-40: 40px;
+    --offset-30: 20px;
+    --offset-20: 20px;
+
+    --title-font: 48px;
+    --form-title-title: 32px;
+    --text-font28: 24px;
+    --text-font20: 16px;
+    --text-font16: 14px;
+    --text-font14: 12px;
+
+    --btn-h: 50px;
+
+    --header-h: 80px;
+    --logo-h: 100px;
+    --header-h-2: 90px;
+    --logo-h-2: 110px;
+    --header-offset: 20px;
+
+    --icon-logo: 54px;
+
+    --content-h: 524px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --field: 10px;
+    --padding: 10px;
+
+    --breadcrumbs-offset: 30px;
+
+    --offset-100: 50px;
+    --offset-60: 30px;
+    --offset-40: 20px;
+    --offset-30: 10px;
+    --offset-20: 10px;
+
+    --title-font: 36px;
+    --form-title-title: 28px;
+    --text-font28: 20px;
+    --text-font20: 16px;
+    --text-font16: 14px;
+    --text-font14: 12px;
+
+    --btn-h: 50px;
+
+    --header-h: 80px;
+    --logo-h: 100px;
+    --header-h-2: 90px;
+    --logo-h-2: 110px;
+    --header-offset: 20px;
+
+    --icon-logo: 54px;
+
+    --content-h: 324px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  :root {
+    --field: 10px;
+    --padding: 10px;
+
+    --breadcrumbs-offset: 20px;
+
+    --offset-100: 40px;
+    --offset-60: 20px;
+    --offset-40: 20px;
+    --offset-30: 10px;
+    --offset-20: 10px;
+
+    --title-font: 28px;
+    --form-title-title: 20px;
+    --text-font28: 16px;
+    --text-font20: 14px;
+    --text-font16: 14px;
+    --text-font14: 12px;
+
+    --btn-h: 40px;
+
+    --header-h: 60px;
+    --logo-h: 60px;
+    --header-h-2: 70px;
+    --logo-h-2: 80px;
+    --header-offset: 10px;
+
+    --icon-logo: 34px;
+
+    --content-h: 224px;
+  }
+}

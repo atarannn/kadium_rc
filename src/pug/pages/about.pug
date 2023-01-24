@@ -1,0 +1,160 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'about'
+    var id_page = 'id-page-about'
+    var class_page = 'class-page-about'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Про проєкт',
+        link: pagesLink[0].about
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/parallax-animation.js')
+  script(defer src='./assets/scripts/sideform.js')
+
+block content
+  include ../components/breadcrumbs/breadcrumbs.pug
+  .about-block.js-about-block-1
+    .about-block__main-img
+      img(src="./assets/images/about/1.jpg")
+    .about-block__text
+      .light-text-uppercase Наш проєкт відзначив за наш підхід до будівництва кварталів, насичену інфраструктуру та головну родзинку району — набережну завдовжки 1 км.
+      .light-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ. У новому номері вона разом з архітекторами, забудовниками та урбаністами склала рейтинг 10 знакових об’єктів столиці та включила до нього відразу два проєкти, які ми реалізуємо спільно з партнерами забудовника1 і забудовника 2 — ми хочемо розказати вам про ці проєкти та показати їхні сильні сторони.
+  .fields.block-offset-100.block.about-block-2
+    .block-left
+      img(src="./assets/images/about/2.jpg")
+    .block-right
+      .block-right__text
+        .dark-text-uppercase.js-about-tile  Характеристики комплексу
+        .dark-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ.
+        ul.about-text-list
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Клас житла
+              .dark-text Комфорт +
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Поверховість
+              .dark-text 16 та 15
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Кількість будинків
+              .dark-text 2 будинки
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Кількість квартир
+              .dark-text 294 квартири
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Технологія
+              .dark-text Монолітно-каркасна
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Стіни
+              .dark-text Перекриття газоблок
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Паркінг
+              .dark-text 120 місць
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Розтермінування
+              .dark-text до 12.2025 року
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Готовність
+              .dark-text ІІ квартал 2024
+          li
+            img(src="./assets/images/about/icon/1.svg")
+            .col
+              .dark-text-uppercase Комерційні
+              .dark-text 15 приміщень
+
+  .about-block.js-about-block-2
+    .about-block__main-img
+      img(src="./assets/images/about/3.jpg")
+    .about-block__text
+      .light-text-uppercase Наш проєкт відзначив за наш підхід до будівництва кварталів, насичену інфраструктуру та головну родзинку району — набережну завдовжки 1 км.
+      .light-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ. У новому номері вона разом з архітекторами, забудовниками та урбаністами склала рейтинг 10 знакових об’єктів столиці та включила до нього відразу два проєкти, які ми реалізуємо спільно з партнерами забудовника1 і забудовника 2 — ми хочемо розказати вам про ці проєкти та показати їхні сильні сторони.
+
+  .fields.block-offset-100.block.about-block-2
+    .block-left
+      img(src="./assets/images/about/4.jpg")
+    .block-right
+      .block-right__text
+        .dark-text-uppercase.js-about-tile Інфраструктура
+        .dark-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ.
+        ul.about-text-list
+          li
+            img(src="./assets/images/about/icon/2.svg")
+            .dark-text Зелена зона
+          li
+            img(src="./assets/images/about/icon/3.svg")
+            .dark-text Комерційні плпощі
+          li
+            img(src="./assets/images/about/icon/4.svg")
+            .dark-text Кав`ярня
+          li
+            img(src="./assets/images/about/icon/5.svg")
+            .dark-text Спортзал
+          li
+            img(src="./assets/images/about/icon/6.svg")
+            .dark-text Дитячий майданчик
+          li
+            img(src="./assets/images/about/icon/7.svg")
+            .dark-text Школа
+          li
+            img(src="./assets/images/about/icon/8.svg")
+            .dark-text Паркінг
+          li
+            img(src="./assets/images/about/icon/9.svg")
+            .dark-text Університет
+          li
+            img(src="./assets/images/about/icon/10.svg")
+            .dark-text Воркаут зона
+          li
+            img(src="./assets/images/about/icon/11.svg")
+            .dark-text Супермаркет
+          li
+            img(src="./assets/images/about/icon/12.svg")
+            .dark-text Стадіон
+  .fields.dev-block
+    .dev-block__text
+      .col
+        .dark-text-uppercase Наш проєкт відзначив за наш підхід до будівництва кварталів, насичену інфраструктуру та головну родзинку району — набережну завдовжки 1 км.
+        .dark-text Саме такий BHAG ми собі поставили та до якого впевнено рухаємося з кожним новим проєктом. Про те, що вже зараз ми змінюємо обличчя Києва та створюємо проєкти майбутнього, говорить і редакція НВ. У новому номері вона разом з архітекторами, забудовниками та урбаністами склала рейтинг 10 знакових об’єктів столиці та включила до нього відразу два проєкти, які ми реалізуємо спільно з партнерами забудовника1 і забудовника 2 — ми хочемо розказати вам про ці проєкти та показати їхні сильні сторони.
+      .col
+        img(src="./assets/images/about/dev.svg")
+        a(href="#").btn
+          span Сайт забудовника
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

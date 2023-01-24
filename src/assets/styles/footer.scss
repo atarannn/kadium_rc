@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: var(--offset-100);
+  padding: 0 var(--field);
+  position: relative;
+  height: 71px;
+  @include to(1660px) {
+    height: 61px;
+  }
+  .smarto {
+    position: absolute;
+    right: var(--field);
+    bottom: 0;
+    img {
+      height: 71px;
+      object-fit: contain;
+      object-position: left bottom;
+      transition: height .4s ease-in-out;
+      @include to(1660px) {
+        height: 61px;
+      }
+    }
+    @include from(1023px) {
+      &:hover {
+        img {
+          height: 81px;
+          transition: height .4s ease-in-out;
+          @include to(1660px) {
+            height: 71px;
+          }
+        }
+      }
+    }
+  }
+}

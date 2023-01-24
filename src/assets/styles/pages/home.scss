@@ -1,0 +1,235 @@
+#home-page {
+  .header {
+    height: var(--header-h);
+    background: rgba(10, 17, 27, 0.85);
+    padding: 0 var(--field) 0 0;
+    &-logo {
+      img {
+        height: var(--logo-h);
+      }
+      @include from(1023px) {
+        &:hover {
+          img {
+            height: calc(var(--logo-h)*1.05);
+            transition: height .4s ease-in-out;
+          }
+        }
+      }
+    }
+    &-nav {
+      .dark-text-uppercase {
+        color: #D9E1E2;
+      }
+      .link--hover {
+        &:before {
+          background: #D9E1E2;
+        }
+        &:after {
+          background: #D9E1E2;
+        }
+      }
+    }
+    &-right {
+      .lang-block {
+        li {
+          a {
+            color: #D9E1E2;
+            &.link--hover-3 {
+              &:before {
+                background: #D9E1E2;
+              }
+            }
+          }
+          &.active {
+            a {
+              color: #6B7582;
+            }
+          }
+        }
+      }
+      .tell {
+        color: #D9E1E2;
+        &.link--hover-3 {
+          &:before {
+            background: #D9E1E2;
+          }
+        }
+      }
+    }
+    .callback-mob {
+      svg {
+        stroke: $wc;
+      }
+    }
+    .menu-btn {
+      &-icon {
+        span {
+          background: $wc;
+        }
+      }
+    }
+  }
+}
+
+.section-1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  &__main-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: var(--offset-60);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--offset-20);
+  }
+  .btn-down {
+    position: absolute;
+    left: var(--field);
+    bottom: var(--offset-60);
+    z-index: 1;
+    &__text {
+      position: absolute;
+      top: 31px;
+      left: 48px;
+      .light-text-uppercase {
+        text-align: left;
+        transition: font-size .3s ease-in-out;
+      }
+    }
+    @include from(1023px) {
+      &:hover {
+        .btn-down__text .light-text-uppercase {
+          font-size: var(--text-font16);
+          transition: font-size .3s ease-in-out;
+        }
+      }
+    }
+    @include to(680px) {
+      display: none;
+    }
+  }
+}
+
+.section-3 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  @include to(1024px) {
+    height: 60vh;
+  }
+  &__main-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 25%;
+    width: 100%;
+    gap: var(--offset-30);
+    @include to(1024px) {
+      max-width: 50%;
+    }
+    @include to(680px) {
+      max-width: 80%;
+    }
+  }
+}
+
+.section-4, .section-5 {
+  .dark-title {
+    margin-bottom: var(--offset-60);
+  }
+}
+
+.section-4 {
+  margin: 210px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  @include to(1660px) {
+    margin: 150px 0;
+  }
+  @include to(1024px) {
+    margin: 100px 0;
+  }
+  .news-btn-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - var(--field)*2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn-swiper-right {
+      justify-content: flex-end;
+    }
+    .btn-swiper-left {
+      justify-content: flex-start;
+    }
+    .btn-swiper-left, .btn-swiper-right {
+      cursor: pointer;
+      display: flex;
+      svg {
+        stroke: $bc;
+        transition: stroke .3s ease-in-out;
+        @include to(1660px) {
+          width: 80%;
+        }
+        @include to(680px) {
+          width: 50%;
+        }
+      }
+      @include from(1023px) {
+        &:hover {
+          svg {
+            stroke: $grey;
+            transition: stroke .3s ease-in-out;
+          }
+        }
+      }
+      &.swiper-button-disabled {
+        opacity: 0.4;
+        pointer-events: none;
+        cursor: no-drop;
+      }
+    }
+  }
+}
+
+.section-5 {
+  .form-title.dark-title {
+    margin-bottom: 0;
+  }
+}
