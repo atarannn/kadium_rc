@@ -198,7 +198,7 @@
     height: 655px;
   }
   @include to(1024px) {
-    height: calc(100vh - var(--offset-100)*2);
+    height: 110vh;
     flex-direction: column-reverse;
   }
   &-left, &-right {
