@@ -44,21 +44,28 @@
   }
   .apartments-card-list {
     width: 100%;
+    position: relative;
     .apartments-card {
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: space-between;
       background: $wc;
-      height: 743px;
-      @include to(1660px) {
-        height: 500px;
-      }
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
       @include to(1024px) {
         flex-direction: column;
-        height: 70vh;
       }
       &.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        height: 743px;
+        @include to(1660px) {
+          height: 500px;
+        }
+        @include to(1024px) {
+          height: 70vh;
+        }
       }
       &-left {
         width: 40%;
