@@ -261,6 +261,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../../assets/images/block-bg.png");
+    @include to(1440px) {
+      padding: 5% 4%;
+    }
     @include to(1024px) {
       padding: 13%;
     }
