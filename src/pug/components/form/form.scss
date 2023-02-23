@@ -25,6 +25,8 @@
 .form-title {
   @include font-medium;
   font-size: var(--form-title-title);
+  width: 90%;
+  text-align: center;
 }
 .form-text {
   width: 70%;
@@ -257,5 +259,8 @@ textarea.form-field__input {
     width: 50%;
     height: 40%;
     background: $wc;
+    @include to(680px) {
+      width: 80%;
+    }
   }
 }

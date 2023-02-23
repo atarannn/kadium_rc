@@ -51,12 +51,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 5px;
     svg {
       stroke: $wc;
     }
   }
   &-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
     img {
+      width: auto;
       height: var(--logo-h);
     }
   }
